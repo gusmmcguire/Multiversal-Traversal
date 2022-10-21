@@ -703,8 +703,8 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: TMP_PRESENT;USE_CINEMACHINE;USE_NEW_INPUT
-    Standalone: TMP_PRESENT;USE_CINEMACHINE;USE_NEW_INPUT
+    Android: TMP_PRESENT;USE_CINEMACHINE;USE_NEW_INPUT;USE_TIMELINE
+    Standalone: TMP_PRESENT;USE_CINEMACHINE;USE_NEW_INPUT;USE_TIMELINE
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
