@@ -221,18 +221,18 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Test
         type: 0
         typeString: 
       - title: Sequence
         value: 'Camera(Closeup,Man3 Prefab Variant);
 
-          Animation(TestConvo,Man3
+          AnimatorPlay(TestConvo,Man3
           Prefab Variant)->Message(End);
 
           Audio(test audio);
 
-          Camera(Original)@Message(End);'
+          Camera(original)@Message(End);'
         type: 0
         typeString: 
       conversationID: 1
