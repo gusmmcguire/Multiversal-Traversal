@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 public abstract class PlayerBaseState
 {
     private bool _isRootState = false;
@@ -25,6 +27,7 @@ public abstract class PlayerBaseState
     public void UpdateStates()
     {
         UpdateState();
+        Debug.Write(this.GetType().Name);
         if (_currentSubState != null)
         {
             _currentSubState.UpdateStates();

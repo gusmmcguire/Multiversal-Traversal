@@ -120,9 +120,9 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void Update()
     {
+        handleRotation();
         _currentState.UpdateStates();
         _cameraRelativeMovement = ConvertToCameraSpace(_appliedMovement);
-        handleRotation();
         _characterController.Move(_cameraRelativeMovement * Time.deltaTime);
     }
 
@@ -130,6 +130,7 @@ public class PlayerStateMachine : MonoBehaviour
     {
         float currentYvalue = vectorToRotate.y;
 
+        
         Vector3 cameraForward = Camera.main.transform.forward;
         Vector3 cameraRight = Camera.main.transform.right;
 
@@ -144,6 +145,14 @@ public class PlayerStateMachine : MonoBehaviour
         Vector3 vectorRotatedToCameraSpace = cameraForwardZProduct + cameraRightXProduct;
         vectorRotatedToCameraSpace.y = currentYvalue;
         return vectorRotatedToCameraSpace;
+        
+        /*
+        Vector3 rotatedVector = new Vector3(vectorToRotate.x, 0, vectorToRotate.z);
+        var rot = Quaternion.AngleAxis(Camera.main.transform.eulerAngles.y, Vector3.up);
+        rotatedVector = rot * rotatedVector;
+        rotatedVector.y = currentYvalue;
+        return rotatedVector;
+        */
     }
 
 

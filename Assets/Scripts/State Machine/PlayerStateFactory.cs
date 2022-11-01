@@ -29,7 +29,7 @@ public class PlayerStateFactory
     {
         return _states[PlayerStates.idle];
     }
-    public PlayerBaseState Walk ()
+    public PlayerBaseState Walk()
     {
         return _states[PlayerStates.walk];
     }
