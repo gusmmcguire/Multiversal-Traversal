@@ -104,10 +104,11 @@ public class PlayerStateMachine : MonoBehaviour
         Vector3 positionToLookAt;
         positionToLookAt.x = _cameraRelativeMovement.x;
         positionToLookAt.y = _zero;
-        positionToLookAt.z = _cameraRelativeMovement.y;
+        positionToLookAt.z = _cameraRelativeMovement.z;
         Quaternion currentRotation = transform.rotation;
         if (_isMovementPressed)
         {
+            Debug.DrawRay(transform.position, positionToLookAt);
             Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
             transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, _rotationFactorPerFrame * Time.deltaTime);
         }

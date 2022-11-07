@@ -170,10 +170,52 @@ MonoBehaviour:
   items: []
   locations: []
   variables:
+  - id: 2
+    fields:
+    - title: Name
+      value: World 1 Puzzle Solved
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   - id: 1
     fields:
     - title: Name
       value: PCE Acquired
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 3
+    fields:
+    - title: Name
+      value: World 1 Spell Pickup
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: World 2 Crystal Pickup
       type: 0
       typeString: 
     - title: Initial Value
@@ -1660,7 +1702,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 90.58807}
     canvasZoom: 0.85000014
   - id: 3
     fields:
@@ -2725,7 +2767,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["World_1_Puzzle_Solved"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3644,13 +3686,13 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["World_1_Spell_Pickup"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 28
         y: 420
         width: 160
         height: 30
@@ -6386,7 +6428,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 964.8935}
+    canvasScrollPosition: {x: 0, y: 848.93604}
     canvasZoom: 0.94000006
   - id: 15
     fields:
@@ -7861,14 +7903,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["World_2_Crystal_Pickup"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210
-        y: 470
+        x: 205.29413
+        y: 466.47058
         width: 160
         height: 30
     - id: 13
@@ -10244,7 +10286,7 @@ MonoBehaviour:
         destinationDialogueID: 13
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["World_2_Crystal_Pickup"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10932,7 +10974,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: None()
         type: 0
         typeString: 
       conversationID: 22

@@ -188,62 +188,62 @@ MonoBehaviour:
   m_Channels: 15
   m_Pose:
     BlendShapes:
-      BrowDownLeft: 0.37840194
-      BrowDownRight: 0.37732196
-      BrowInnerUp: 0.04574309
-      BrowOuterUpLeft: 0
-      BrowOuterUpRight: 0
-      CheekPuff: 0.028625812
-      CheekSquintLeft: 0.06233721
-      CheekSquintRight: 0.053211544
-      EyeBlinkLeft: 0.06355757
-      EyeBlinkRight: 0.06351698
-      EyeLookDownLeft: 0.12927869
-      EyeLookDownRight: 0.13088964
-      EyeLookInLeft: 0.30197033
+      BrowDownLeft: 0
+      BrowDownRight: 0
+      BrowInnerUp: 0.104427174
+      BrowOuterUpLeft: 0.022225507
+      BrowOuterUpRight: 0.030859472
+      CheekPuff: 0.06811507
+      CheekSquintLeft: 0.15029158
+      CheekSquintRight: 0.11153066
+      EyeBlinkLeft: 0.19765529
+      EyeBlinkRight: 0.1911863
+      EyeLookDownLeft: 0.13367459
+      EyeLookDownRight: 0.13711643
+      EyeLookInLeft: 0.6356186
       EyeLookInRight: 0
       EyeLookOutLeft: 0
-      EyeLookOutRight: 0.177302
+      EyeLookOutRight: 0.5240399
       EyeLookUpLeft: 0
       EyeLookUpRight: 0
-      EyeSquintLeft: 0.26413733
-      EyeSquintRight: 0.26415253
+      EyeSquintLeft: 0.45141855
+      EyeSquintRight: 0.40761122
       EyeWideLeft: 0
       EyeWideRight: 0
-      JawForward: 0.053645853
+      JawForward: 0.055490118
       JawLeft: 0
-      JawOpen: 0.086941555
-      JawRight: 0.019589586
-      MouthClose: 0.102555566
-      MouthDimpleLeft: 0.018249577
-      MouthDimpleRight: 0.020346992
-      MouthFrownLeft: 0.026521938
-      MouthFrownRight: 0.012106913
-      MouthFunnel: 0.12941733
+      JawOpen: 0.044725344
+      JawRight: 0.074016355
+      MouthClose: 0.05412759
+      MouthDimpleLeft: 0.029232655
+      MouthDimpleRight: 0.037945952
+      MouthFrownLeft: 0.008324553
+      MouthFrownRight: 0.003585564
+      MouthFunnel: 0.074338056
       MouthLeft: 0
-      MouthLowerDownLeft: 0.10778195
-      MouthLowerDownRight: 0.10207731
-      MouthPressLeft: 0.07888356
-      MouthPressRight: 0.071511775
-      MouthPucker: 0.23230013
-      MouthRight: 0.0050590057
-      MouthRollLower: 0.06574165
-      MouthRollUpper: 0.026307976
-      MouthShrugLower: 0.2018858
-      MouthShrugUpper: 0.10630358
+      MouthLowerDownLeft: 0.0994019
+      MouthLowerDownRight: 0.10678198
+      MouthPressLeft: 0.12688941
+      MouthPressRight: 0.09368837
+      MouthPucker: 0.20499039
+      MouthRight: 0.018796733
+      MouthRollLower: 0.09220298
+      MouthRollUpper: 0.020854898
+      MouthShrugLower: 0.2911517
+      MouthShrugUpper: 0.18430804
       MouthSmileLeft: 0
       MouthSmileRight: 0
-      MouthStretchLeft: 0.1298767
-      MouthStretchRight: 0.143693
-      MouthUpperUpLeft: 0.030365637
-      MouthUpperUpRight: 0.03004921
-      NoseSneerLeft: 0.09917088
-      NoseSneerRight: 0.10447633
-      TongueOut: 0.00000002474826
-    HeadPosition: {x: -0.1359606, y: -0.14635621, z: -0.62545544}
-    HeadOrientation: {x: 0.0805814, y: -0.066095024, z: 0.042557, w: -0.9936433}
-    LeftEyeOrientation: {x: -0.03990873, y: -0.054084107, z: -0.0021633254, w: -0.9977362}
-    RightEyeOrientation: {x: -0.039307885, y: -0.092029095, z: -0.003635744, w: -0.99497354}
+      MouthStretchLeft: 0.15482363
+      MouthStretchRight: 0.21898341
+      MouthUpperUpLeft: 0.038505696
+      MouthUpperUpRight: 0.037731923
+      NoseSneerLeft: 0.12041793
+      NoseSneerRight: 0.14024554
+      TongueOut: 0.0000046309046
+    HeadPosition: {x: -0.05382719, y: -0.14122406, z: -0.32739457}
+    HeadOrientation: {x: 0.044691883, y: 0.15898207, z: -0.08679724, w: -0.9824426}
+    LeftEyeOrientation: {x: -0.041332435, y: -0.15923662, z: -0.006672704, w: -0.98635226}
+    RightEyeOrientation: {x: -0.040050462, y: -0.19276072, z: -0.007874523, w: -0.98039657}
   m_SyncPresentationOffset:
     m_FrameNumber: 0
     m_Subframe:
@@ -383,9 +383,9 @@ MonoBehaviour:
     m_Directory: Assets/Takes
     m_SceneNumber: 2
     m_ShotName: Stability test
-    m_TakeNumber: 13
+    m_TakeNumber: 14
     m_Description: 
-    m_Take: {fileID: 11400000, guid: 31e2aae03d3729849a46387d2057c1fe, type: 2}
+    m_Take: {fileID: 11400000, guid: cf9cabb69cde5674d8c9a856cbacec3f, type: 2}
     m_IterationBase: {fileID: 0}
     m_Director: {fileID: 402464199}
   m_FrameRate:
@@ -405,7 +405,7 @@ PlayableDirector:
   m_GameObject: {fileID: 402464197}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 1057403843061276668, guid: 31e2aae03d3729849a46387d2057c1fe, type: 2}
+  m_PlayableAsset: {fileID: -402027614842315479, guid: cf9cabb69cde5674d8c9a856cbacec3f, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -417,7 +417,7 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 4962552431207623573, guid: 4cc4216744e1f224fa2497eefd0d16a9, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 7217209551517269209, guid: 31e2aae03d3729849a46387d2057c1fe, type: 2}
+  - key: {fileID: -74702479460570638, guid: cf9cabb69cde5674d8c9a856cbacec3f, type: 2}
     value: {fileID: 2050569415553289152}
   m_ExposedReferences:
     m_References:
