@@ -185,6 +185,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Puzzle",
+            "id": "bc7cc2ef-7ffc-4d59-9cf5-10e05f794235",
+            "actions": [
+                {
+                    "name": "Click And Drag",
+                    "type": "Button",
+                    "id": "a91292cb-4383-4f69-b138-079885c40637",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "801c9693-721c-4d8d-a3be-51a8463ef269",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click And Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

@@ -12,6 +12,7 @@ public class PlayerIdleState : PlayerBaseState
         {
             SwitchState(Factory.Walk());
         }
+        else if (Ctx.IsInDialogue) SwitchState(Factory.Dialogue());
     }
 
     public override void EnterState()

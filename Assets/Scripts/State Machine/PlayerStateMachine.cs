@@ -15,6 +15,7 @@ public class PlayerStateMachine : MonoBehaviour
     Vector3 _cameraRelativeMovement;
     bool _isMovementPressed;
     bool _isRunPressed;
+    bool _isInDialogue;
 
     float _rotationFactorPerFrame = 15;
 
@@ -49,6 +50,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool IsJumping { set { _isJumping = value; } }
     public bool RequireNewJumpPress { get { return _requireNewJumpPress; } set { _requireNewJumpPress = value; } }
     public bool IsJumpPressed { get { return _isJumpPressed; } }
+    public bool IsInDialogue { get { return _isInDialogue; } set { _isInDialogue = value; } }
     public float Gravity { get { return _gravity; } }
     public float RunMultiplier { get { return _runMultiplier; } }
     public float SpeedMultiplier { get { return _speedMultiplier; } }
@@ -57,7 +59,7 @@ public class PlayerStateMachine : MonoBehaviour
     public float AppliedMovementX { get { return _appliedMovement.x; } set { _appliedMovement.x = value; } }
     public float AppliedMovementZ { get { return _appliedMovement.z; } set { _appliedMovement.z = value; } }
     public Vector2 CurrentMovementInput { get { return _currentMovementInput; } }
-
+    
 
     private void Awake()
     {
@@ -67,6 +69,7 @@ public class PlayerStateMachine : MonoBehaviour
         _states = new PlayerStateFactory(this);
         _currentState = _states.Grounded();
         _currentState.EnterState();
+        
 
         _playerInput.InGame.Move.started += OnMovementInput;
         _playerInput.InGame.Move.canceled += OnMovementInput;

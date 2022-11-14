@@ -8,6 +8,7 @@ public class PlayerWalkState : PlayerBaseState
 
     public override void CheckSwitchStates()
     {
+
         if (!Ctx.IsMovementPressed)
         {
             SwitchState(Factory.Idle());
@@ -15,6 +16,7 @@ public class PlayerWalkState : PlayerBaseState
         {
             SwitchState(Factory.Run());
         }
+        else if (Ctx.IsInDialogue) SwitchState(Factory.Dialogue());
     }
 
     public override void EnterState()

@@ -207,6 +207,34 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Puzzle"",
+            ""id"": ""bc7cc2ef-7ffc-4d59-9cf5-10e05f794235"",
+            ""actions"": [
+                {
+                    ""name"": ""Click And Drag"",
+                    ""type"": ""Button"",
+                    ""id"": ""a91292cb-4383-4f69-b138-079885c40637"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""801c9693-721c-4d8d-a3be-51a8463ef269"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click And Drag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -246,6 +274,9 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
         m_InGame_Interact = m_InGame.FindAction("Interact", throwIfNotFound: true);
         m_InGame_Jump = m_InGame.FindAction("Jump", throwIfNotFound: true);
         m_InGame_Pause = m_InGame.FindAction("Pause", throwIfNotFound: true);
+        // Puzzle
+        m_Puzzle = asset.FindActionMap("Puzzle", throwIfNotFound: true);
+        m_Puzzle_ClickAndDrag = m_Puzzle.FindAction("Click And Drag", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -366,6 +397,39 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
         }
     }
     public InGameActions @InGame => new InGameActions(this);
+
+    // Puzzle
+    private readonly InputActionMap m_Puzzle;
+    private IPuzzleActions m_PuzzleActionsCallbackInterface;
+    private readonly InputAction m_Puzzle_ClickAndDrag;
+    public struct PuzzleActions
+    {
+        private @GameControls m_Wrapper;
+        public PuzzleActions(@GameControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ClickAndDrag => m_Wrapper.m_Puzzle_ClickAndDrag;
+        public InputActionMap Get() { return m_Wrapper.m_Puzzle; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PuzzleActions set) { return set.Get(); }
+        public void SetCallbacks(IPuzzleActions instance)
+        {
+            if (m_Wrapper.m_PuzzleActionsCallbackInterface != null)
+            {
+                @ClickAndDrag.started -= m_Wrapper.m_PuzzleActionsCallbackInterface.OnClickAndDrag;
+                @ClickAndDrag.performed -= m_Wrapper.m_PuzzleActionsCallbackInterface.OnClickAndDrag;
+                @ClickAndDrag.canceled -= m_Wrapper.m_PuzzleActionsCallbackInterface.OnClickAndDrag;
+            }
+            m_Wrapper.m_PuzzleActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ClickAndDrag.started += instance.OnClickAndDrag;
+                @ClickAndDrag.performed += instance.OnClickAndDrag;
+                @ClickAndDrag.canceled += instance.OnClickAndDrag;
+            }
+        }
+    }
+    public PuzzleActions @Puzzle => new PuzzleActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -391,5 +455,9 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+    }
+    public interface IPuzzleActions
+    {
+        void OnClickAndDrag(InputAction.CallbackContext context);
     }
 }

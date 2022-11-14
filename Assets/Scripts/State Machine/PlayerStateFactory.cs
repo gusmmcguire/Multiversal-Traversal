@@ -6,7 +6,9 @@ enum PlayerStates
     run,
     grounded,
     jump,
-    fall
+    fall,
+    puzzle,
+    dialogue
 }
 
 public class PlayerStateFactory
@@ -23,6 +25,8 @@ public class PlayerStateFactory
         _states[PlayerStates.jump] = new PlayerJumpState(_context, this);
         _states[PlayerStates.grounded] = new PlayerGroundedState(_context, this);
         _states[PlayerStates.fall] = new PlayerFallState(_context, this);
+        _states[PlayerStates.puzzle] = new PlayerPuzzleState(_context, this);
+        _states[PlayerStates.dialogue] = new PlayerDialogueState(_context, this);
     }
 
     public PlayerBaseState Idle()
@@ -49,5 +53,14 @@ public class PlayerStateFactory
     public PlayerBaseState Fall()
     {
         return _states[PlayerStates.fall];
+    }
+
+    public PlayerBaseState Puzzle()
+    {
+        return _states[PlayerStates.puzzle];
+    }
+    public PlayerBaseState Dialogue()
+    {
+        return _states[PlayerStates.dialogue];
     }
 }
